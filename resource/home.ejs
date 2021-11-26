@@ -1,0 +1,19 @@
+<%-include('common/header',{dummyData:'Check variable data'})-%>
+
+Resource Hello Ejs 
+<%= name %>
+<p>ID is <%=id%></p>
+<% if(id>2){%>
+    <h1>Home</h1>
+<%}else{%>
+<h1>Blog</h1>
+    <%}%>
+
+
+ <ul>
+     <%blogs.forEach(function(item){%>
+         <li><%= item %></li>
+     <%})%>
+ </ul>   
+
+ <%-include('common/footer')-%>
